@@ -4,6 +4,9 @@ import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
   try{
+
+    
+
     return NextResponse.json({hola:"hola"}, {status: 200})
   }catch (e){
     return NextResponse.json({chao:"chao"}, {status: 400})

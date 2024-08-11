@@ -26,9 +26,12 @@ export default function Home() {
 
       console.log(ip)
 
-      fetch('/api/ip', {
+      fetch('https://libertador.pkiservices.co/validacion-back/obtener-firmador', {
         method: 'POST',
-        body: JSON.stringify(ip)
+        body: JSON.stringify(ip),
+        headers: {
+          'Content-Type': 'application/json'
+        }
       })
       .then((res) => res.json())
       .then((data) => console.log(data))
