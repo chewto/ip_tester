@@ -26,7 +26,7 @@ export default function Home() {
 
       console.log(ip)
 
-      fetch('https://inmuebles-libertador.vercel.app/api/ip', {
+      fetch('/api/ip', {
         method: 'POST',
         body: JSON.stringify(ip)
       })
