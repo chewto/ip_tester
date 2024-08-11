@@ -1,5 +1,6 @@
 "use client"
 
+import { sql } from "@vercel/postgres";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -25,7 +26,7 @@ export default function Home() {
 
       console.log(ip)
 
-      fetch('/api/ip', {
+      fetch('http://localhost:3000/api/ip', {
         method: 'POST',
         body: JSON.stringify(ip)
       })
